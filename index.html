@@ -1,79 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="header text-uppercase fw-bold">
-        Tic-Tac-Toe
-    </div>
-
+  </head>
+  <body>
+    <div class="header text-uppercase fw-bold"> Tic-Tac-Toe </div>
     <div class="container text-center">
-        <div class="d-flex row">
-            <div class="col player alert alert-dark">
-                Player 1 Turn
-            </div>
-        </div>
+      <div class="d-flex row">
+        <div class="col-sm player alert alert-dark fw-bold"> Player 1 Turn </div>
+      </div>
     </div>
-
-    <div class="container">    
-        <div class="row text-center">
-            <div class="col">
-                <button class="btn btn-primary d-none" onclick="reset()">Play Again</button>
-            </div>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col pb-3">
+          <button class="btn btn-primary d-none" onclick="reset()">Play Again</button>
         </div>
+      </div>
     </div>
-
     <div class="d-flex container justify-content-center align-items-center">
-        <div class="row">
-            <div class="col">
-                <table class="table table-borderless">
-                    <tr>
-                        <td class="box border-end border-bottom fw-bold" id="box1">
-                            
-                        </td>
-                        <td class="box border-end border-bottom fw-bold" id="box2">
-                            
-                        </td>
-                        <td class="box border-bottom fw-bold" id="box3 ">
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="box border-end border-bottom fw-bold" id="box4">
-                            
-                        </td>
-                        <td class="box border-end border-bottom fw-bold" id="box5">
-                            
-                        </td>
-                        <td class="box border-bottom fw-bold" id="box6">
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="box border-end fw-bold" id="box7">
-                            
-                        </td>
-                        <td class="box border-end fw-bold" id="box8">
-                            
-                        </td>
-                        <td class="box fw-bold" id="box9">
-                            
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>      
-    </div>     
-
+      <div class="row">
+        <div class="col">
+          <table class="table table-borderless border">
+            <tr>
+              <td class="box border-dark border-end border-bottom fw-bold border-4" id="box1"></td>
+              <td class="box border-dark border-end border-bottom fw-bold border-4" id="box2"></td>
+              <td class="box border-dark border-bottom fw-bold border-4" id="box3 "></td>
+            </tr>
+            <tr>
+              <td class="box border-dark border-end border-bottom fw-bold border-4" id="box4"></td>
+              <td class="box border-dark border-end border-bottom fw-bold border-4" id="box5"></td>
+              <td class="box border-dark border-bottom fw-bold border-4" id="box6"></td>
+            </tr>
+            <tr>
+              <td class="box border-dark border-end fw-bold border-4" id="box7"></td>
+              <td class="box border-dark border-end fw-bold border-4" id="box8"></td>
+              <td class="box fw-bold" id="box9"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
