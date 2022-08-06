@@ -1,6 +1,14 @@
+//Intiatlize variables
+// turn keeps track of which player turn it is
+// counter keeps track of how many cells are filled
+// winner tracks if a winner is found and sets to true
+
 var turn = 1
 var counter = 0
 var winner = false
+
+
+//Function to set each td element to place an X or O based on turn when clicked
 
 function start() {
 	$('td').on('click', function() {
@@ -8,7 +16,10 @@ function start() {
 	})
 }
 
-start()
+//Place function takes an input of box (td) from the start function
+//If the td element is empty check whos turn it is calling playerTurn() and place an X or O depending on the return
+//Increase the counter variable when placed and check if there is a winning line
+//If the td element is not empty, set the background to red for 100ms as an invalid move
 
 function place(box) {
 	if (box.innerText === '') {
@@ -31,6 +42,8 @@ function place(box) {
 	}
 }
 
+//playerTurn returns which player turn it is as well as setting the alert text to display whos turn it is
+
 function playerTurn() {
 	if (turn === 1) {
 		turn++
@@ -49,6 +62,12 @@ function playerTurn() {
 		return 2
 	}
 };
+
+
+//checkWinner looks through each possible winning combination by concatenating the array elements and if they are equal to XXX or OOO then there is a winner
+//The winner is then displayed using the turn function, if turn is 1 when a winner is found then player 2 won and the opposite is also true. 
+//if counter is 9 and winner is still false then every td is filled and there is no line equal to XXX or OOO and a tie game is displayed
+//after the game is over the play again button is displayed by removing d-none
 
 function checkWinner() {
 
@@ -127,6 +146,9 @@ function checkWinner() {
 	console.log('checkWinner finished running')
 }
 
+
+//reset function to return the game to the original setup
+
 function reset() {
 	console.log('reset function being ran')
 	$('td').each(function() {
@@ -145,3 +167,6 @@ function reset() {
 	$('.alert').removeClass('alert-info')
 	start()
 }
+
+// Run the start function to being the game
+start()

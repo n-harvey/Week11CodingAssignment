@@ -27,7 +27,7 @@ td {
 .box {
 	width: 250px;
 	height: 250px;
-	text-shadow: 5px 5px black;
+	text-shadow: 5px 5px lightgray;
 }
 
 td {
